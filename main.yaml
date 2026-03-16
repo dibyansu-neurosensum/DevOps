@@ -1,0 +1,23 @@
+"apple" : "i am a red fruit"
+1 : "this is DKD"
+
+# ---      this for dividing a document in yaml file
+---
+
+# lists
+ -apple
+ -mango
+ -banana
+ -Apple 
+# in yaml apple and Apple are not same both is different
+
+---
+
+cities:
+ -new delhi
+ -mumbai
+ -gujrat
+
+
+# ...  this mean document is ended
+...
