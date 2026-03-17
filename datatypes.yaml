@@ -1,0 +1,30 @@
+# String variables
+myself: divyanshu
+fruit: "apple"
+job: 'swe'
+
+
+bio: |
+ this is my profile.
+ i am a very.
+# output
+# {
+#   "bio": "this is my profile.\ni am a very.\n"
+# }
+
+
+
+# write a single line in multiple lines
+message: >
+ this will
+ all be 
+ in one single line
+# output
+# same as
+# message: this will all be in one single line
+
+# int,float,boolean datatype
+number: 568184
+marks: 98.76
+booleanValue: No   # n, N, false, False, FALSE
+#  Same for true ->yes, y, Y
