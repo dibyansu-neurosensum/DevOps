@@ -26,5 +26,34 @@ message: >
 # int,float,boolean datatype
 number: 568184
 marks: 98.76
+boolean: !!bool No
 booleanValue: No   # n, N, false, False, FALSE
 #  Same for true ->yes, y, Y
+
+# specify the type 
+zero: !!int 0
+positiveNum: !!int 45
+negativeNum: !!int -45
+binary: !!int 110110b
+octalNum: !!int 0657 
+hexa: !!int 0x54
+commaValue: !!int +540_000   #540,000
+expoenetial number: 6.023E56
+
+# floating point number
+marks: !!float 56.89
+infinite: !!float .inf
+not a num: .nan
+
+
+# null
+surname: !!null Null  #or null NULL ~
+~: this is a null key
+
+
+# date and time  
+
+# Example YAML file
+date: !!timestamp 2002-12-14
+india time: 2001-12-15T02:59:43.10 +5:30
+no time zone: 2001-12-15T02:59:43.10
