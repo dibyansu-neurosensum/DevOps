@@ -1,0 +1,57 @@
+student: !!seq
+ - marks
+ - name
+ - roll_no
+
+cities: [new delhi, mumbai]
+
+# some of the keys of the seq will be empty
+# sparese seq 
+sparese seq:
+ - hey
+ - how
+ -
+ - Null
+ - sup
+
+
+# nested sequence
+-
+ - mango
+ - apple
+ - banana
+-
+ - null
+
+# output
+# [
+#   [
+#     "mango",
+#     "apple",
+#     "banana"
+#   ],
+#   [
+#     null
+#   ]
+# ]
+
+
+
+
+# key: value pairs are called maps
+!!map
+
+# nested mapping: map within an map 
+name: DKD 
+role:
+  age: 79
+  job: student
+
+# output
+# {
+#   "name": "DKD",
+#   "role": {
+#     "age": 79,
+#     "job": "student"
+#   }
+# }

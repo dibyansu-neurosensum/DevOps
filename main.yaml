@@ -5,18 +5,26 @@
 ---
 
 # lists
- -apple
- -mango
- -banana
- -Apple 
+ - apple
+ - mango
+ - banana
+ - Apple 
 # in yaml apple and Apple are not same both is different
 
 ---
 
 cities:
- -new delhi
- -mumbai
- -gujrat
+ - new delhi
+ - mumbai
+ - gujrat
+
+
+
+---
+cities: [new delhi, mumbai]
+---
+
+{mango: "yellow fruit", age: 56}
 
 
 # ...  this mean document is ended
