@@ -1,0 +1,12 @@
+---
+
+school:
+  - name: DPS
+    principal: someone
+    student:
+      - rno: 12
+        name: kumal
+        marks: 67
+      - rno: 13
+        name: raj
+        marks: 55

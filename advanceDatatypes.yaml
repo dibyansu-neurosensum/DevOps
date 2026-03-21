@@ -55,3 +55,110 @@ role:
 #     "job": "student"
 #   }
 # }
+
+# some as 
+name: DKD
+role: {age: 79,job: student}
+
+
+
+
+
+
+# pairs: keys may have duplicate values
+# !!pairs
+
+pair example: !!pairs  
+ - job: student
+ - job: teacher
+
+#  output
+# {
+#   "pair example": [
+#     [
+#       "job",
+#       "student"
+#     ],
+#     [
+#       "job",
+#       "teacher"
+#     ]
+#   ]
+# }
+# some as 
+pair example: !!pairs [job: student, job: teacher]
+
+
+
+
+
+
+# !!set will allow you to have unique values
+names: !!set
+ ? kunal
+ ? apporv
+ ? rahul
+
+  # dictionary  !!omap
+people: !!omap
+ - kunal:
+    name: kunal
+    age: 79
+    height: 678
+ - rahul:
+    name: rahul
+    age: 79
+    height: 678
+# output
+# {
+#   "people": [
+#     {
+#       "kunal": {
+#         "name": "kunal",
+#         "age": 79,
+#         "height": 678
+#       }
+#     },
+#     {
+#       "rahul": {
+#         "name": "rahul",
+#         "age": 79,
+#         "height": 678
+#       }
+#     }
+#   ]
+# }
+
+
+
+
+
+
+
+# reusing some properties
+likings: 
+ fav fruit: mango
+ dislikes: grapes
+
+person1:
+ name: kunal
+ fav fruit: mango
+ dislikes: grapes
+
+person2:
+ name: rahul
+ fav fruit: mango
+ dislikes: grapes
+
+ # reusing some properties using anchors
+likings: &likes
+ fav fruit: mango
+ dislikes: grapes
+
+person1:
+ name: kunal
+ <<: *likes
+
+person2:
+ name: rahul
+ <<: *likes
